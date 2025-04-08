@@ -1,0 +1,22 @@
+Steps to connect
+------------------------------------------
+
+sudo yum install -y docker
+
+sudo service docker start
+
+sudo service docker status
+------------------------------------------
+sudo docker pull philippaul/node-mysql-app:02
+------------------------------------------
+sudo docker run --rm -p 80:3000 \
+  -e DB_HOST="rmj-database.c7e8wi6e0y9n.eu-north-1.rds.amazonaws.com" \
+  -e DB_USER="rmj_admin" \
+  -e DB_PASSWORD="today_123" \
+  -d philippaul/node-mysql-app:02
+
+  sudo docker ps
+
+My docker image :- wizardly_mendeleev
+
+  sudo docker logs -f wizardly_mendeleev
